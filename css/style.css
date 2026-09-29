@@ -1,0 +1,359 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #555;
+  font-family: 'Oswald', sans-serif;
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
+.poster {
+  background-color: #e6e6e6;
+  width: 800px;
+  padding: 30px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  color: #222;
+  border: 4px solid #6b4c9a;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  border-bottom: 4px solid #555;
+  padding-bottom: 15px;
+  margin-bottom: 20px;
+}
+
+.header h1 {
+  font-size: 64px;
+  line-height: 0.9;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  width: 70%;
+}
+
+.steps-box {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.steps-number {
+  font-size: 72px;
+  font-weight: 700;
+  color: #fce300;
+  line-height: 0.8;
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  transform: rotate(180deg);
+}
+
+.steps-text {
+  font-size: 14px;
+  text-transform: uppercase;
+  width: 60px;
+  line-height: 1.1;
+  color: #555;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 25px;
+  gap: 20px;
+}
+
+.col {
+  flex: 1;
+}
+
+h2 {
+  font-size: 28px;
+  text-transform: uppercase;
+  line-height: 1;
+  margin-bottom: 10px;
+  border-top: 4px solid #555;
+  padding-top: 5px;
+}
+
+h3 {
+  font-size: 18px;
+  text-transform: uppercase;
+  margin-bottom: 5px;
+  border-bottom: 2px solid #555;
+  display: inline-block;
+}
+
+p, li {
+  font-size: 14px;
+  line-height: 1.3;
+  color: #444;
+}
+
+.goods-list {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.goods-icons {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5px;
+}
+
+.goods-icons div {
+  width: 50px;
+  height: 50px;
+  background-color: #ddd;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 10px;
+  text-align: center;
+  text-transform: uppercase;
+  border: 2px solid #555;
+}
+
+.goods-text ul {
+  list-style: none;
+}
+
+.goods-text ul li::before {
+  content: "• ";
+  color: #555;
+}
+
+.playlists {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.pie-chart {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background: conic-gradient(
+    #fce300 0deg 150deg,
+    #e6e6e6 150deg 230deg,
+    #fce300 230deg 280deg,
+    #e6e6e6 280deg 320deg,
+    #fce300 320deg 360deg
+  );
+  border: 3px solid #fce300;
+  position: relative;
+}
+
+.pie-chart::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: conic-gradient(
+    transparent 0deg 150deg,
+    #e6e6e6 150deg 230deg,
+    transparent 230deg 280deg,
+    #e6e6e6 280deg 320deg,
+    transparent 320deg 360deg
+  );
+  clip-path: circle(50%);
+}
+
+.pie-labels {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+.pie-labels span {
+  position: absolute;
+  font-size: 20px;
+  font-weight: 700;
+  color: #222;
+}
+
+.pie-labels span:nth-child(1) { top: 40%; left: 75%; }
+.pie-labels span:nth-child(2) { top: 75%; left: 40%; }
+.pie-labels span:nth-child(3) { top: 40%; left: 15%; }
+.pie-labels span:nth-child(4) { top: 15%; left: 30%; }
+.pie-labels span:nth-child(5) { top: 15%; left: 65%; }
+
+.playlist-list ol {
+  padding-left: 15px;
+  font-size: 14px;
+}
+
+.playlist-list ol li {
+  margin-bottom: 5px;
+}
+
+.chart-bars {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.bar-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.bar-label {
+  width: 40px;
+  font-size: 12px;
+  text-align: right;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.bar {
+  height: 20px;
+  background-color: #fce300;
+  border: 2px solid #555;
+}
+
+.restaurants-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  font-size: 12px;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.restaurant-item {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 2px;
+}
+
+.stars {
+  color: #fce300;
+  text-shadow: 1px 1px 0 #555, -1px -1px 0 #555, 1px -1px 0 #555, -1px 1px 0 #555;
+  font-size: 12px;
+}
+
+.transport {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.transport-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.transport-label {
+  width: 60px;
+  font-size: 20px;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.transport-bar {
+  height: 25px;
+  background-color: #fce300;
+}
+
+.area-chart {
+  width: 100%;
+  height: 120px;
+  margin-top: 10px;
+  border-bottom: 2px solid #555;
+  position: relative;
+}
+
+.area-chart svg {
+  width: 100%;
+  height: 100%;
+}
+
+.area-labels {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  margin-top: 5px;
+  font-style: italic;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+  border-top: 4px solid #555;
+  padding-top: 15px;
+}
+
+.time-big {
+  font-size: 80px;
+  font-weight: 700;
+  line-height: 0.8;
+  letter-spacing: -2px;
+}
+
+.footer-arrow {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 14px;
+  color: #555;
+  text-align: center;
+}
+
+.footer-arrow span {
+  font-style: italic;
+}
+
+.subtitle {
+  font-size: 12px;
+  font-style: italic;
+  color: #555;
+  margin-top: 5px;
+}
+
+.chart-bars,
+.restaurants-grid {
+  margin-top: 10px;
+}
+
+.bar--90 { width: 90%; }
+.bar--80 { width: 80%; }
+.bar--60 { width: 60%; }
+.bar--45 { width: 45%; }
+.bar--30 { width: 30%; }
+.bar--20 { width: 20%; }
+
+.transport-bar--70 { width: 70%; }
+.transport-bar--85 { width: 85%; }
+.transport-bar--100 { width: 100%; }
+.transport-bar--40 { width: 40%; }
+
+.transport-subtitle {
+  margin-top: 10px;
+}
+
+.footer-arrow-indicator {
+  font-size: 24px;
+  margin: 5px 0;
+}
